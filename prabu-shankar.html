@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prabu Shankar V — Senior Program Leader | Digital Transformation & Agentic AI</title>
+<meta name="description" content="20+ years enterprise leadership. Digital Transformation, Agentic AI, ServiceNow. 50+ global clients, 98% CSAT, 3 regions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07090f;
+  --surface:#0e1118;
+  --surface2:#141720;
+  --surface3:#1c2030;
+  --border:rgba(255,255,255,0.07);
+  --border2:rgba(255,255,255,0.13);
+  --gold:#b8964a;
+  --gold-lt:#d4ae6a;
+  --gold-dim:rgba(184,150,74,0.12);
+  --gold-dim2:rgba(184,150,74,0.06);
+  --teal:#2a9d8f;
+  --teal-dim:rgba(42,157,143,0.1);
+  --blue:#3a7bd5;
+  --blue-dim:rgba(58,123,213,0.1);
+  --text:#e8e4dc;
+  --text2:#8e8b84;
+  --text3:#4e4c48;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7;overflow-x:hidden}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:2px}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;background:rgba(7,9,15,0.92);backdrop-filter:blur(20px);border-bottom:0.5px solid var(--border)}
+.nav-brand{display:flex;align-items:center}
+.nav-initials{display:none}
+.nav-name{font-family:var(--sans);font-size:0.88rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{text-decoration:none;font-size:0.72rem;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--text2);transition:color 0.2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.45rem 1.1rem;border:0.5px solid var(--gold);color:var(--gold);text-decoration:none;border-radius:2px;transition:background 0.2s,color 0.2s}
+.nav-cta:hover{background:var(--gold);color:var(--bg)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center;padding:7rem 3rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 40%,rgba(184,150,74,0.05) 0%,transparent 60%)}
+.hero-lines{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:80px 80px;opacity:0.5;mask-image:radial-gradient(ellipse 100% 80% at 50% 0%,black 20%,transparent 80%)}
+.hero-left{position:relative;z-index:1}
+.hero-eyebrow{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;opacity:0;animation:rise 0.7s 0.1s forwards}
+.eyebrow-line{width:32px;height:0.5px;background:var(--gold)}
+.eyebrow-text{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
+.hero-h1{font-family:var(--sans);font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:500;line-height:1.1;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);opacity:0;animation:rise 0.7s 0.25s forwards}
+.hero-subtitle{margin-top:1.25rem;font-size:0.9rem;font-weight:300;color:var(--text2);line-height:1.8;max-width:520px;opacity:0;animation:rise 0.7s 0.4s forwards}
+.hero-metrics{display:flex;gap:2.5rem;margin-top:2.5rem;opacity:0;animation:rise 0.7s 0.55s forwards}
+.hm-val{font-family:var(--serif);font-size:2.2rem;color:var(--gold);line-height:1}
+.hm-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-top:0.3rem}
+.hero-actions{display:flex;gap:1rem;margin-top:2.5rem;opacity:0;animation:rise 0.7s 0.7s forwards}
+.btn-g{display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.6rem;background:var(--gold);color:var(--bg);border-radius:2px;transition:background 0.2s,transform 0.15s}
+.btn-g:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.btn-o{display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.6rem;background:transparent;color:var(--text2);border:0.5px solid var(--border2);border-radius:2px;transition:color 0.2s,border-color 0.2s,transform 0.15s}
+.btn-o:hover{color:var(--text);border-color:var(--text);transform:translateY(-1px)}
+
+/* ── HERO CARD ── */
+.hero-card{position:relative;z-index:1;background:var(--surface);border:0.5px solid var(--border2);border-radius:8px;padding:2rem;opacity:0;animation:rise 0.8s 0.5s forwards}
+.hc-header{display:flex;align-items:center;gap:1rem;padding-bottom:1.25rem;border-bottom:0.5px solid var(--border)}
+.hc-avatar{width:52px;height:52px;background:var(--gold-dim);border:0.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.1rem;color:var(--gold);flex-shrink:0}
+.hc-role{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text2);margin-bottom:0.2rem}
+.hc-name{font-size:1rem;font-weight:500;color:var(--text)}
+.hc-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:1.25rem 0;border-radius:4px;overflow:hidden}
+.hc-stat{background:var(--surface2);padding:1rem;text-align:center}
+.hc-stat-v{font-family:var(--serif);font-size:1.6rem;color:var(--gold)}
+.hc-stat-l{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-top:0.2rem}
+.hc-badges{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.25rem}
+.badge{font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.25rem 0.6rem;border:0.5px solid var(--border2);border-radius:2px;color:var(--text2)}
+.badge-gold{border-color:rgba(184,150,74,0.4);color:var(--gold);background:var(--gold-dim2)}
+.hc-loc{margin-top:1rem;font-size:0.78rem;color:var(--text3);display:flex;align-items:center;gap:0.4rem}
+.dot-pulse{width:6px;height:6px;background:#3ecf8e;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+
+/* ── SECTIONS ── */
+.wrap{max-width:1100px;margin:0 auto;padding:0 3rem}
+section{padding:6rem 0}
+.sec-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.sec-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.1;color:var(--text)}
+.sec-rule{width:36px;height:0.5px;background:var(--gold);margin:1rem 0 2.5rem;opacity:0.6}
+.sec-lead{font-size:0.9rem;font-weight:300;color:var(--text2);max-width:640px;line-height:1.85;margin-bottom:2.5rem}
+
+/* ── REVEAL ── */
+.r{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease,transform 0.55s ease}
+.r.on{opacity:1;transform:none}
+.r2{opacity:0;transform:translateY(18px);transition:opacity 0.55s 0.1s ease,transform 0.55s 0.1s ease}
+.r2.on{opacity:1;transform:none}
+.r3{opacity:0;transform:translateY(18px);transition:opacity 0.55s 0.2s ease,transform 0.55s 0.2s ease}
+.r3.on{opacity:1;transform:none}
+
+/* ── DASHBOARD SECTION ── */
+.dash-bg{background:var(--surface);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border)}
+.dash-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+.dash-tabs{display:flex;gap:0.25rem;background:var(--surface2);border:0.5px solid var(--border);border-radius:4px;padding:3px}
+.dash-tab{font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:2px;cursor:pointer;color:var(--text2);transition:color 0.2s,background 0.2s}
+.dash-tab.active{background:var(--gold);color:var(--bg)}
+.dash-tab:hover:not(.active){color:var(--text)}
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:1.5rem}
+.kpi{background:var(--surface2);padding:1.25rem 1.5rem}
+.kpi-v{font-family:var(--serif);font-size:2rem;color:var(--gold);line-height:1}
+.kpi-l{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-top:0.3rem}
+.kpi-delta{font-size:0.72rem;color:#3ecf8e;margin-top:0.2rem}
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem}
+.chart-card{background:var(--surface2);border:0.5px solid var(--border);border-radius:6px;padding:1.5rem}
+.chart-card-full{background:var(--surface2);border:0.5px solid var(--border);border-radius:6px;padding:1.5rem;margin-bottom:1.5rem}
+.cc-title{font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text2);margin-bottom:1.25rem}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:8px;font-size:11px;color:var(--text2)}
+.leg-item{display:flex;align-items:center;gap:4px}
+.leg-swatch{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+
+/* ── IMPACT WALL ── */
+.impact-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:6px;overflow:hidden}
+.iw-cell{background:var(--bg);padding:2rem 1.75rem;transition:background 0.2s}
+.iw-cell:hover{background:var(--surface)}
+.iw-num{font-family:var(--serif);font-size:2.4rem;color:var(--gold);line-height:1;margin-bottom:0.4rem}
+.iw-desc{font-size:0.78rem;color:var(--text2);line-height:1.55}
+
+/* ── EXPERTISE ── */
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:6px;overflow:hidden}
+.exp-cell{background:var(--bg);padding:2rem;transition:background 0.2s;position:relative;overflow:hidden}
+.exp-cell::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.3s}
+.exp-cell:hover{background:var(--surface)}
+.exp-cell:hover::before{opacity:1}
+.exp-num{font-family:var(--mono);font-size:0.65rem;color:var(--text3);margin-bottom:0.75rem}
+.exp-title{font-size:0.95rem;font-weight:500;color:var(--text);margin-bottom:0.6rem}
+.exp-desc{font-size:0.78rem;color:var(--text2);line-height:1.6}
+.exp-tag{margin-top:1rem;display:inline-block;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.5rem;background:var(--gold-dim2);border:0.5px solid rgba(184,150,74,0.25);border-radius:2px;color:var(--gold)}
+
+/* ── TIMELINE ── */
+.timeline{display:grid;grid-template-columns:200px 1fr;gap:3rem}
+.tl-spine{position:relative;padding-top:0.5rem}
+.tl-spine::after{content:'';position:absolute;top:12px;right:0;bottom:0;width:0.5px;background:linear-gradient(to bottom,var(--gold),transparent)}
+.tl-years{font-family:var(--mono);font-size:0.78rem;color:var(--gold);text-align:right;padding-right:1.5rem}
+.tl-co{font-size:0.72rem;color:var(--text3);margin-top:0.25rem;text-align:right;padding-right:1.5rem}
+.tl-body{padding-bottom:3rem;border-bottom:0.5px solid var(--border);margin-bottom:0.5rem}
+.tl-body:last-child{border-bottom:none}
+.tl-dot{position:absolute;right:-5px;top:10px;width:9px;height:9px;background:var(--gold);border-radius:50%;box-shadow:0 0 0 3px var(--gold-dim)}
+.tl-role{font-family:var(--serif);font-size:1.35rem;color:var(--text);margin-bottom:0.25rem}
+.tl-co-name{font-size:0.78rem;color:var(--text3);letter-spacing:0.05em;margin-bottom:0.75rem}
+.tl-desc{font-size:0.82rem;color:var(--text2);line-height:1.75}
+.tl-bullets{list-style:none;margin-top:0.75rem}
+.tl-bullets li{font-size:0.78rem;color:var(--text2);padding:0.3rem 0;padding-left:1rem;position:relative}
+.tl-bullets li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:0.7rem}
+
+/* ── CERTS ── */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.cert-card{background:var(--surface);border:0.5px solid var(--border);border-radius:6px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:0.75rem}
+.cert-icon{width:32px;height:32px;background:var(--gold-dim);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--gold);font-weight:500;flex-shrink:0;font-family:var(--mono)}
+.cert-name{font-size:0.8rem;font-weight:500;color:var(--text);line-height:1.4}
+.cert-body{font-size:0.7rem;color:var(--text3);margin-top:0.2rem}
+
+/* ── CONTACT ── */
+.contact-wrap{display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:start}
+.contact-form{background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
+.form-group label{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3)}
+.form-group input,.form-group textarea{background:var(--surface2);border:0.5px solid var(--border2);border-radius:4px;padding:0.65rem 0.9rem;font-size:0.85rem;color:var(--text);font-family:var(--sans);outline:none;transition:border-color 0.2s;resize:vertical}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-submit{width:100%;padding:0.85rem;background:var(--gold);color:var(--bg);border:none;border-radius:2px;font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);transition:background 0.2s}
+.form-submit:hover{background:var(--gold-lt)}
+.contact-info{}
+.ci-item{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem}
+.ci-icon{width:40px;height:40px;background:var(--gold-dim);border:0.5px solid rgba(184,150,74,0.3);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.ci-label{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3)}
+.ci-val{font-size:0.9rem;color:var(--text);margin-top:0.1rem}
+.geo-strip{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:2rem}
+.geo-tag{display:flex;align-items:center;gap:0.4rem;font-size:0.72rem;padding:0.35rem 0.7rem;background:var(--surface);border:0.5px solid var(--border2);border-radius:2px;color:var(--text2)}
+
+/* ── FOOTER ── */
+footer{border-top:0.5px solid var(--border);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between}
+.ft-copy{font-size:0.72rem;color:var(--text3)}
+.ft-brand{font-family:var(--sans);font-size:0.75rem;font-weight:500;color:var(--gold);opacity:0.6;letter-spacing:0.18em;text-transform:uppercase}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:0 1.5rem}
+  .nav-links,.nav-cta{display:none}
+  .hero{grid-template-columns:1fr;padding:5rem 1.5rem 3rem}
+  .hero-card{display:none}
+  .wrap{padding:0 1.5rem}
+  .kpi-strip{grid-template-columns:1fr 1fr}
+  .chart-grid{grid-template-columns:1fr}
+  .impact-wall{grid-template-columns:1fr 1fr}
+  .exp-grid{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr;gap:0.5rem}
+  .tl-spine{display:none}
+  .contact-wrap{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1rem;padding:1.5rem;text-align:center}
+}
+
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* ── WIPRO PROGRESSION ── */
+.wp-track{display:flex;align-items:flex-start;gap:0;margin:0.5rem 0}
+.wp-node{display:flex;flex-direction:column;align-items:center;flex:1;opacity:0;transform:translateY(10px);transition:opacity 0.5s ease,transform 0.5s ease}
+.wp-visible .wp-node:nth-child(1){opacity:1;transform:none;transition-delay:0.1s}
+.wp-visible .wp-node:nth-child(3){opacity:1;transform:none;transition-delay:0.35s}
+.wp-visible .wp-node:nth-child(5){opacity:1;transform:none;transition-delay:0.6s}
+.wp-connector{flex:0 0 auto;width:40px;height:2px;background:var(--border2);margin-top:22px;position:relative}
+.wp-connector::after{content:'›';position:absolute;right:-6px;top:-9px;color:var(--text3);font-size:0.8rem}
+.wp-year{font-size:0.65rem;font-family:var(--mono);letter-spacing:0.1em;color:var(--text3);margin-bottom:6px}
+.wp-dot{width:12px;height:12px;border-radius:50%;background:var(--nc);margin-bottom:8px;box-shadow:0 0 0 3px rgba(255,255,255,0.04)}
+.wp-card{background:var(--surface3);border:0.5px solid var(--border2);border-top:2px solid var(--nc);border-radius:4px;padding:0.75rem;width:100%;text-align:center}
+.wp-role{font-size:0.75rem;font-weight:500;color:var(--text);line-height:1.3;margin-bottom:0.2rem}
+.wp-detail{font-size:0.65rem;color:var(--text3);margin-bottom:0.5rem}
+.wp-rating{display:flex;align-items:center;justify-content:center;gap:0.3rem}
+.wp-star{font-size:0.6rem;color:var(--gold);letter-spacing:0.05em}.wp-star-dim{opacity:0.2}
+.wp-rlabel{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold)}
+.wp-tenure{font-size:0.68rem;color:var(--text3);text-align:center;margin-top:0.75rem;font-style:italic;letter-spacing:0.03em}
+/* ── RADIAL MILESTONES ── */
+.rm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;padding:0.5rem 0}
+.rm-item{display:flex;flex-direction:column;align-items:center;gap:0.5rem}
+.rm-svg{width:80px;height:80px}
+.rm-track{fill:none;stroke:rgba(255,255,255,0.06);stroke-width:6}
+.rm-fill{fill:none;stroke-width:6;stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%}
+.rm-pct{font-family:var(--mono);font-size:13px;fill:var(--text);text-anchor:middle;dominant-baseline:middle}
+.rm-label{font-size:0.72rem;font-weight:500;color:var(--text);text-align:center;line-height:1.3}
+.rm-sub{font-size:0.62rem;color:var(--text3);text-align:center;line-height:1.4}
+@media(max-width:600px){.rm-grid{grid-template-columns:repeat(2,1fr)}.wp-connector{width:16px}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <span class="nav-name">Prabu Shankar V</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">Profile</a></li>
+    <li><a href="#dashboard">Dashboard</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<div class="hero">
+  <div class="hero-lines"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Senior Program Leader · Chennai, India</span></div>
+    <h1 class="hero-h1">Prabu Shankar V</h1>
+    <p class="hero-subtitle">20+ years driving enterprise Digital Transformation, Agentic AI adoption, and ServiceNow excellence across Fortune-class clients in the Americas, APMEA, and Europe. I don't just deliver programmes — I grow accounts, secure C-suite trust, and build organisations that scale.</p>
+    <div class="hero-metrics">
+      <div><div class="hm-val">20+</div><div class="hm-label">Years Leadership</div></div>
+      <div><div class="hm-val">50+</div><div class="hm-label">Global Clients</div></div>
+      <div><div class="hm-val">98%</div><div class="hm-label">Client CSAT</div></div>
+      <div><div class="hm-val">$1.2M+</div><div class="hm-label">Revenue Generated</div></div>
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-g">Get In Touch ↗</a>
+      <a href="#dashboard" class="btn-o">View Impact Dashboard</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="hc-header">
+      <div class="hc-avatar">PSV</div>
+      <div>
+        <div class="hc-role">Senior Program Manager</div>
+        <div class="hc-name">Wipro Limited · 2017–Present</div>
+      </div>
+    </div>
+    <div class="hc-stat-grid">
+      <div class="hc-stat"><div class="hc-stat-v">98%</div><div class="hc-stat-l">On-Time Delivery</div></div>
+      <div class="hc-stat"><div class="hc-stat-v">94%</div><div class="hc-stat-l">Account Retention</div></div>
+      <div class="hc-stat"><div class="hc-stat-v">0</div><div class="hc-stat-l">Escalations (7yr)</div></div>
+      <div class="hc-stat"><div class="hc-stat-v">#1</div><div class="hc-stat-l">Fastest Deploy</div></div>
+    </div>
+    <div class="hc-badges">
+      <span class="badge badge-gold">Agentic AI</span>
+      <span class="badge badge-gold">ServiceNow</span>
+      <span class="badge">LEAN Six Sigma BB</span>
+      <span class="badge">P&L Management</span>
+      <span class="badge">Multi-Geo Delivery</span>
+      <span class="badge">RFP / Pre-Sales</span>
+    </div>
+    <div class="hc-loc"><div class="dot-pulse"></div>Open to opportunities</div>
+  </div>
+</div>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section id="about">
+  <div class="wrap">
+    <div class="r">
+      <div class="sec-label">Executive Profile</div>
+      <h2 class="sec-title">Visionary Leader.<br>Measurable Results.</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-lead">I combine deep technical command of ServiceNow, BPM platforms, and emerging AI technologies with executive-level stakeholder management and strategic growth acumen — translating complex roadmaps into boardroom-ready business cases that secure buy-in and drive ROI.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem" class="r2">
+      <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:6px;padding:2rem">
+        <div style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text3);margin-bottom:1.25rem">Core Philosophy</div>
+        <p style="font-size:0.85rem;color:var(--text2);line-height:1.8;margin-bottom:1rem">A proactive revenue contributor — not just a delivery leader. I mine upsell and cross-sell opportunities systematically, respond to competitive RFPs with compelling Agentic AI narratives, and build high-performing teams from the ground up.</p>
+        <p style="font-size:0.85rem;color:var(--text2);line-height:1.8">Zero critical escalations across all flagship programmes over a 7-year delivery tenure — achieved through proactive RAID governance, bi-weekly risk reviews, and a structured escalation pre-emption protocol.</p>
+      </div>
+      <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:6px;padding:2rem">
+        <div style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text3);margin-bottom:1.25rem">Skills & Competencies</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem">
+          <span class="badge badge-gold">Agentic AI</span>
+          <span class="badge badge-gold">ServiceNow CSM</span>
+          <span class="badge badge-gold">Digital Transformation</span>
+          <span class="badge">BPM Delivery</span>
+          <span class="badge">LEAN Six Sigma BB</span>
+          <span class="badge">Program Management</span>
+          <span class="badge">P&L Management</span>
+          <span class="badge">RFP Leadership</span>
+          <span class="badge">Change Management</span>
+          <span class="badge">Talent Development</span>
+          <span class="badge">Multi-Geo Delivery</span>
+          <span class="badge">Executive Engagement</span>
+          <span class="badge">UiPath</span>
+          <span class="badge">Celonis</span>
+          <span class="badge">AWS</span>
+          <span class="badge">Agile / Scrum</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DASHBOARD ══════════ -->
+<section id="dashboard" class="dash-bg">
+  <div class="wrap">
+    <div class="r">
+      <div class="dash-header">
+        <div>
+          <div class="sec-label">Impact Analytics</div>
+          <h2 class="sec-title">Executive Dashboard</h2>
+          <div class="sec-rule"></div>
+        </div>
+        <div class="dash-tabs">
+          <div class="dash-tab active" onclick="showDash('delivery')">Delivery</div>
+          <div class="dash-tab" onclick="showDash('revenue')">Revenue</div>
+          <div class="dash-tab" onclick="showDash('ai')">AI Impact</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELIVERY PANEL -->
+    <div id="panel-delivery" class="dash-panel r2">
+      <div class="kpi-strip">
+        <div class="kpi"><div class="kpi-v">50+</div><div class="kpi-l">Programmes Delivered</div><div class="kpi-delta">↑ across 3 regions</div></div>
+        <div class="kpi"><div class="kpi-v">98%</div><div class="kpi-l">On-Time Delivery</div><div class="kpi-delta">↑ consistently 7yr</div></div>
+        <div class="kpi"><div class="kpi-v">0</div><div class="kpi-l">Critical Escalations</div><div class="kpi-delta">↑ flagship programmes</div></div>
+        <div class="kpi"><div class="kpi-v">–20%</div><div class="kpi-l">Deployment Time</div><div class="kpi-delta">↑ vs planned baseline</div></div>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="cc-title">Delivery performance over career (CSAT %)</div>
+          <div style="position:relative;width:100%;height:200px">
+            <canvas id="csatChart" role="img" aria-label="Line chart of client CSAT scores from 2008 to 2025, consistently above 95%">CSAT scores: 2008–2016 avg 93, 2017–2020 avg 96, 2021–2025 avg 98.</canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="cc-title">Wipro career progressions & performance ratings</div>
+          <div id="wipro-progression" style="padding:0.5rem 0" role="img" aria-label="Three career progression steps within Wipro with top talent performance ratings">
+            <div class="wp-track">
+              <div class="wp-node" style="--nc:#b8964a">
+                <div class="wp-year">2017</div>
+                <div class="wp-dot"></div>
+                <div class="wp-card">
+                  <div class="wp-role">Project Manager</div>
+                  <div class="wp-detail">Transformation Office</div>
+                  <div class="wp-rating"><span class="wp-star">★★★★</span><span class="wp-star wp-star-dim">★</span><span class="wp-rlabel">Exceeds</span></div>
+                </div>
+              </div>
+              <div class="wp-connector"></div>
+              <div class="wp-node" style="--nc:#2a9d8f">
+                <div class="wp-year">2020</div>
+                <div class="wp-dot"></div>
+                <div class="wp-card">
+                  <div class="wp-role">Program Manager</div>
+                  <div class="wp-detail">Multi-Geo Portfolio Lead</div>
+                  <div class="wp-rating"><span class="wp-star">★★★★★</span><span class="wp-rlabel">Top Talent</span></div>
+                </div>
+              </div>
+              <div class="wp-connector"></div>
+              <div class="wp-node" style="--nc:#3a7bd5">
+                <div class="wp-year">2022</div>
+                <div class="wp-dot"></div>
+                <div class="wp-card">
+                  <div class="wp-role">Senior Program Manager</div>
+                  <div class="wp-detail">Transformation &amp; AI</div>
+                  <div class="wp-rating"><span class="wp-star">★★★★★</span><span class="wp-rlabel">Top Talent</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="wp-tenure">8 years · Consistent Top Talent designation across all cycles</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-card-full">
+        <div class="cc-title">Key delivery milestones & improvements</div>
+        <div id="radial-milestones" role="img" aria-label="Radial progress indicators showing: defect reduction 40%, change rework cut 30%, platform rejection reduced 45%, deployment time reduced 20%">
+          <div class="rm-grid">
+            <div class="rm-item">
+              <svg class="rm-svg" viewBox="0 0 80 80">
+                <circle class="rm-track" cx="40" cy="40" r="32"/>
+                <circle class="rm-fill" cx="40" cy="40" r="32" stroke="#b8964a" stroke-dasharray="201" stroke-dashoffset="201" data-pct="40"/>
+                <text class="rm-pct" x="40" y="44">40%</text>
+              </svg>
+              <div class="rm-label">Defect Reduction</div>
+              <div class="rm-sub">via LEAN Six Sigma retrospectives</div>
+            </div>
+            <div class="rm-item">
+              <svg class="rm-svg" viewBox="0 0 80 80">
+                <circle class="rm-track" cx="40" cy="40" r="32"/>
+                <circle class="rm-fill" cx="40" cy="40" r="32" stroke="#2a9d8f" stroke-dasharray="201" stroke-dashoffset="201" data-pct="30"/>
+                <text class="rm-pct" x="40" y="44">30%</text>
+              </svg>
+              <div class="rm-label">Change Rework Cut</div>
+              <div class="rm-sub">dual sign-off control boards</div>
+            </div>
+            <div class="rm-item">
+              <svg class="rm-svg" viewBox="0 0 80 80">
+                <circle class="rm-track" cx="40" cy="40" r="32"/>
+                <circle class="rm-fill" cx="40" cy="40" r="32" stroke="#3a7bd5" stroke-dasharray="201" stroke-dashoffset="201" data-pct="45"/>
+                <text class="rm-pct" x="40" y="44">45%</text>
+              </svg>
+              <div class="rm-label">Platform Rejection ↓</div>
+              <div class="rm-sub">structured change management</div>
+            </div>
+            <div class="rm-item">
+              <svg class="rm-svg" viewBox="0 0 80 80">
+                <circle class="rm-track" cx="40" cy="40" r="32"/>
+                <circle class="rm-fill" cx="40" cy="40" r="32" stroke="#b8964a" stroke-dasharray="201" stroke-dashoffset="201" data-pct="20" style="opacity:0.6"/>
+                <text class="rm-pct" x="40" y="44">20%</text>
+              </svg>
+              <div class="rm-label">Deployment Time ↓</div>
+              <div class="rm-sub">Wipro record-fastest deploy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVENUE PANEL -->
+    <div id="panel-revenue" class="dash-panel r2" style="display:none">
+      <div class="kpi-strip">
+        <div class="kpi"><div class="kpi-v">$1.2M+</div><div class="kpi-l">Upsell Revenue</div><div class="kpi-delta">↑ FY23–25, 12 accounts</div></div>
+        <div class="kpi"><div class="kpi-v">94%</div><div class="kpi-l">Account Retention</div><div class="kpi-delta">↑ 0 involuntary churn</div></div>
+        <div class="kpi"><div class="kpi-v">3</div><div class="kpi-l">Multi-Tower Conversions</div><div class="kpi-delta">↑ within 18 months</div></div>
+        <div class="kpi"><div class="kpi-v">15+</div><div class="kpi-l">C-Suite Relationships</div><div class="kpi-delta">↑ Fortune-class clients</div></div>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="cc-title">Revenue growth trajectory (indexed, FY19=100)</div>
+          <div style="position:relative;width:100%;height:200px">
+            <canvas id="revenueChart" role="img" aria-label="Bar chart showing revenue index growth from FY19 to FY25, peaking in FY25 at 210">Revenue index: FY19 100, FY20 112, FY21 128, FY22 145, FY23 168, FY24 188, FY25 210.</canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="cc-title">Engagement type evolution</div>
+          <div class="legend">
+            <span class="leg-item"><span class="leg-swatch" style="background:#b8964a"></span>Multi-tower Strategic</span>
+            <span class="leg-item"><span class="leg-swatch" style="background:#2a9d8f;border:1.5px dashed #2a9d8f;background:transparent"></span>Single-tower</span>
+          </div>
+          <div style="position:relative;width:100%;height:180px">
+            <canvas id="engagementChart" role="img" aria-label="Stacked bar chart showing shift from single-tower to multi-tower engagements between 2019 and 2024">Engagement mix shifting toward multi-tower: 2019 30% multi, 2024 70% multi.</canvas>
+          </div>
+        </div>
+      </div>
+      <div class="chart-card-full">
+        <div class="cc-title">Account portfolio health — retention & CSAT by year</div>
+        <div style="position:relative;width:100%;height:200px">
+          <canvas id="portfolioChart" role="img" aria-label="Combined line chart showing account retention and CSAT both staying above 93% from 2018 to 2025">Account retention and CSAT both consistently above 93% across 7 years.</canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI PANEL -->
+    <div id="panel-ai" class="dash-panel r2" style="display:none">
+      <div class="kpi-strip">
+        <div class="kpi"><div class="kpi-v">70%</div><div class="kpi-l">AP Queries Auto-Resolved</div><div class="kpi-delta">↑ first touch, AI agents</div></div>
+        <div class="kpi"><div class="kpi-v">95%+</div><div class="kpi-l">Document Accuracy</div><div class="kpi-delta">↑ GenAI IDP pipeline</div></div>
+        <div class="kpi"><div class="kpi-v">85%</div><div class="kpi-v">AI Certification Rate</div><div class="kpi-delta">↑ 200+ workforce, 6mo</div></div>
+        <div class="kpi"><div class="kpi-v">2000+</div><div class="kpi-l">Hours Saved Annually</div><div class="kpi-delta">↑ manual entry eliminated</div></div>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="cc-title">AI automation impact — before vs after resolution time (hours)</div>
+          <div style="position:relative;width:100%;height:200px">
+            <canvas id="aiResolutionChart" role="img" aria-label="Bar chart comparing AP query resolution time before AI (48 hours) and after AI (under 4 hours)">AP resolution: before 48 hours, after 4 hours.</canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="cc-title">Agentic AI adoption curve — workforce certification (%)</div>
+          <div style="position:relative;width:100%;height:200px">
+            <canvas id="adoptionChart" role="img" aria-label="Line chart showing workforce AI certification growing from 10% in month 1 to 85% in month 6">AI certification: Month 1 10%, Month 3 45%, Month 6 85%.</canvas>
+          </div>
+        </div>
+      </div>
+      <div class="chart-card-full">
+        <div class="cc-title">Human-in-the-loop reduction across AI deployments (%)</div>
+        <div style="position:relative;width:100%;height:200px">
+          <canvas id="hitlChart" role="img" aria-label="Bar chart showing human-in-the-loop reduction: AP Helpdesk 70%, Smart Procure 30%, Document Processing 95%, ServiceNow CSM 55%">HITL reduction: AP Helpdesk 70%, Smart Procure 30%, Doc Processing 95%, ServiceNow CSM 55%.</canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ IMPACT WALL ══════════ -->
+<section id="impact">
+  <div class="wrap">
+    <div class="r"><div class="sec-label">Tangible Outcomes</div><h2 class="sec-title">Measurable Impact</h2><div class="sec-rule"></div></div>
+    <div class="impact-wall r2">
+      <div class="iw-cell"><div class="iw-num">$1.2M+</div><div class="iw-desc">Upsell & cross-sell revenue generated across 12 accounts in FY23–25 through systematic SLA gap mining</div></div>
+      <div class="iw-cell"><div class="iw-num">70%</div><div class="iw-desc">AP queries resolved at first touch via Agentic AI — cutting resolution from 48 hrs to under 4 hrs</div></div>
+      <div class="iw-cell"><div class="iw-num">94%</div><div class="iw-desc">Account retention rate over 7 years across full portfolio — zero involuntary churn</div></div>
+      <div class="iw-cell"><div class="iw-num">25%</div><div class="iw-desc">Procurement cycle time reduction through Agentic AI Smart Procure on ServiceNow</div></div>
+      <div class="iw-cell"><div class="iw-num">40%</div><div class="iw-desc">Reduction in repeat defects within 12 months via LEAN Six Sigma retrospective culture</div></div>
+      <div class="iw-cell"><div class="iw-num">2,000+</div><div class="iw-desc">Annual manual data-entry hours eliminated via GenAI document processing at 95%+ accuracy</div></div>
+      <div class="iw-cell"><div class="iw-num">85%</div><div class="iw-desc">AI certification completion in 6 months across 200+ member delivery workforce</div></div>
+      <div class="iw-cell"><div class="iw-num">#1</div><div class="iw-desc">Wipro's fastest-ever ServiceNow deployment — 3 months, 20% under timeline, zero escalations</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EXPERTISE ══════════ -->
+<section id="expertise" style="background:var(--surface);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border)">
+  <div class="wrap">
+    <div class="r"><div class="sec-label">What I Bring</div><h2 class="sec-title">Strategic Impact Areas</h2><div class="sec-rule"></div></div>
+    <div class="exp-grid r2">
+      <div class="exp-cell"><div class="exp-num">01</div><div class="exp-title">Agentic AI & ServiceNow Innovation</div><div class="exp-desc">Pioneering next-generation AI on ServiceNow CSM — autonomous workflows, AI virtual agents, and predictive orchestration reducing human dependencies by 40–60%. Built Now Assist PoCs demonstrating autonomous case resolution and intelligent triage.</div><span class="exp-tag">Core Differentiator</span></div>
+      <div class="exp-cell"><div class="exp-num">02</div><div class="exp-title">Revenue Growth & Opportunity Mining</div><div class="exp-desc">Systematically convert delivery insights into new SOWs, expansion projects, and multi-year extensions. Craft compelling RFP/RFI responses with pre-sales, positioning AI and transformation as competitive differentiators.</div><span class="exp-tag">Revenue Impact</span></div>
+      <div class="exp-cell"><div class="exp-num">03</div><div class="exp-title">Enterprise Programme Delivery</div><div class="exp-desc">End-to-end governance across full SDLC — from architecture through deployment and post-go-live optimisation. Scalable delivery frameworks that reduce variance and improve repeatability across multi-geo portfolios.</div><span class="exp-tag">Execution Excellence</span></div>
+      <div class="exp-cell"><div class="exp-num">04</div><div class="exp-title">C-Suite Stakeholder Engagement</div><div class="exp-desc">Sustained Director, VP, and C-suite relationships across Americas, APMEA, and Europe. Navigate politically sensitive escalations with diplomacy, converting conflicts into alignment and programme momentum.</div><span class="exp-tag">Executive Trust</span></div>
+      <div class="exp-cell"><div class="exp-num">05</div><div class="exp-title">Strategic Governance & Risk</div><div class="exp-desc">Enterprise-grade governance frameworks — RACI, change control boards, RAID logs, milestone cadences — providing full programme visibility. Post-engagement retrospectives that feed continuous improvement back into methodology.</div><span class="exp-tag">Zero Escalations</span></div>
+      <div class="exp-cell"><div class="exp-num">06</div><div class="exp-title">AI Adoption & Organisational Change</div><div class="exp-desc">Champion Agentic AI adoption at scale — building internal capability and securing executive sponsorship. Maturity-assessment tools and PoV frameworks that accelerate board-level buy-in and reduce adoption lag.</div><span class="exp-tag">Change Leadership</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CAREER ══════════ -->
+<section id="career">
+  <div class="wrap">
+    <div class="r"><div class="sec-label">Career Journey</div><h2 class="sec-title">20 Years of Leadership</h2><div class="sec-rule"></div></div>
+    <div class="timeline">
+      <div>
+        <div style="position:relative">
+          <div class="tl-spine">
+            <div class="tl-years">2017 – Present</div>
+            <div class="tl-co">Wipro Limited</div>
+            <div class="tl-dot" style="top:6px"></div>
+          </div>
+        </div>
+        <div style="height:2.5rem"></div>
+        <div style="position:relative">
+          <div class="tl-spine">
+            <div class="tl-years">2016 – 2017</div>
+            <div class="tl-co">Atos India</div>
+            <div class="tl-dot" style="top:6px"></div>
+          </div>
+        </div>
+        <div style="height:2rem"></div>
+        <div style="position:relative">
+          <div class="tl-spine">
+            <div class="tl-years">2008 – 2016</div>
+            <div class="tl-co">IBM India</div>
+            <div class="tl-dot" style="top:6px"></div>
+          </div>
+        </div>
+        <div style="height:2rem"></div>
+        <div style="position:relative">
+          <div class="tl-spine">
+            <div class="tl-years">2006 – 2008</div>
+            <div class="tl-co">Intelenet Global</div>
+            <div class="tl-dot" style="top:6px"></div>
+          </div>
+        </div>
+        <div style="height:2rem"></div>
+        <div style="position:relative">
+          <div class="tl-spine">
+            <div class="tl-years">2004 – 2006</div>
+            <div class="tl-co">Sutherland Global</div>
+            <div class="tl-dot" style="top:6px"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tl-body r">
+          <div class="tl-role">Senior Program Manager — Transformation Office</div>
+          <div class="tl-co-name">Wipro Limited · Chennai, India</div>
+          <p class="tl-desc">Leading large-scale BPM and ServiceNow transformation programmes across 50+ global clients. Drove Agentic AI adoption and digital innovation alongside sustained revenue growth, combining deep solution expertise with executive stakeholder management.</p>
+          <ul class="tl-bullets">
+            <li>Delivered Wipro's fastest-ever ServiceNow deployment — 3 months, 20% under timeline, 3 geographies, zero escalations</li>
+            <li>Generated $1.2M+ upsell revenue across 12 accounts through systematic SLA gap analysis</li>
+            <li>Secured board-level approval for $1.2M+ Agentic AI transformation with 14-month ROI case</li>
+            <li>Maintained 94% account retention and 98% CSAT consistently across the portfolio</li>
+          </ul>
+        </div>
+        <div class="tl-body r2">
+          <div class="tl-role">Project Manager</div>
+          <div class="tl-co-name">Atos India</div>
+          <p class="tl-desc">Led FP&A Process Digital Transformation, Standardisation & Optimisation across finance operations. Managed executive stakeholder engagement and coordinated cross-functional workstreams against aggressive transformation timelines.</p>
+        </div>
+        <div class="tl-body r3">
+          <div class="tl-role">Senior Quality Lead</div>
+          <div class="tl-co-name">IBM India · 8 Years</div>
+          <p class="tl-desc">Drove Service Delivery Transformation and Process Excellence across a large multi-client environment. Designed and led LEAN Six Sigma training, defect prevention initiatives, and cross-functional supervisory frameworks.</p>
+          <ul class="tl-bullets">
+            <li>Managed key client relationships achieving consistently high NPS and retention</li>
+            <li>Built cross-functional supervisory frameworks adopted as organisational standards</li>
+          </ul>
+        </div>
+        <div class="tl-body r">
+          <div class="tl-role">Senior CSE</div>
+          <div class="tl-co-name">Intelenet Global Services</div>
+          <p class="tl-desc">Asset & Sales Finance bookkeeping, Cash-to-Invoice reconciliations, and service delivery for financial services clients.</p>
+        </div>
+        <div class="tl-body r2">
+          <div class="tl-role">Process Trainer & Tech Lead</div>
+          <div class="tl-co-name">Sutherland Global Services</div>
+          <p class="tl-desc">Foundational experience in people leadership and service delivery — Talent Acquisition, Training & Coaching, and Technical Support (L1 & L2).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CERTIFICATIONS ══════════ -->
+<section style="background:var(--surface);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border)">
+  <div class="wrap">
+    <div class="r"><div class="sec-label">Credentials</div><h2 class="sec-title">Certifications & Education</h2><div class="sec-rule"></div></div>
+    <div class="cert-grid r2">
+      <div class="cert-card"><div class="cert-icon">LSS</div><div><div class="cert-name">Lean Six Sigma Black Belt</div><div class="cert-body">Process excellence & quality leadership</div></div></div>
+      <div class="cert-card"><div class="cert-icon">ASM</div><div><div class="cert-name">Agile Scrum Master</div><div class="cert-body">EXIN Certified</div></div></div>
+      <div class="cert-card"><div class="cert-icon">PMP</div><div><div class="cert-name">Wipro PMP Certified</div><div class="cert-body">Project management professional</div></div></div>
+      <div class="cert-card"><div class="cert-icon">AWS</div><div><div class="cert-name">AWS Certified Business Professional</div><div class="cert-body">Cloud architecture & strategy</div></div></div>
+      <div class="cert-card"><div class="cert-icon">ITIL</div><div><div class="cert-name">ITIL Foundation</div><div class="cert-body">EXIN Certified</div></div></div>
+      <div class="cert-card"><div class="cert-icon">UI</div><div><div class="cert-name">UiPath: BA, Solution Architect & Impl. Mgr</div><div class="cert-body">Automation expert triple-certified</div></div></div>
+      <div class="cert-card"><div class="cert-icon">CEL</div><div><div class="cert-name">Celonis Process Mining Expert</div><div class="cert-body">Process intelligence & mining</div></div></div>
+      <div class="cert-card"><div class="cert-icon">QAI</div><div><div class="cert-name">Certified Business Quality Analyst</div><div class="cert-body">QAI Global Institute</div></div></div>
+    </div>
+    <div style="margin-top:2rem;background:var(--surface2);border:0.5px solid var(--border);border-radius:6px;padding:1.5rem 2rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap" class="r3">
+      <div><div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text3);margin-bottom:0.3rem">Education</div><div style="font-size:0.95rem;font-weight:500;color:var(--text)">BBM — Bank Management</div><div style="font-size:0.78rem;color:var(--text2);margin-top:0.2rem">University of Madras · St. Joseph's College · 1999–2002</div></div>
+      <div style="margin-left:auto;display:flex;gap:0.5rem;flex-wrap:wrap">
+        <div style="text-align:center;padding:0.75rem 1.25rem;background:var(--bg);border-radius:4px;border:0.5px solid var(--border)"><div style="font-family:var(--serif);font-size:1.4rem;color:var(--gold)">20+</div><div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text3);margin-top:0.2rem">Years</div></div>
+        <div style="text-align:center;padding:0.75rem 1.25rem;background:var(--bg);border-radius:4px;border:0.5px solid var(--border)"><div style="font-family:var(--serif);font-size:1.4rem;color:var(--gold)">8</div><div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text3);margin-top:0.2rem">Certifications</div></div>
+        <div style="text-align:center;padding:0.75rem 1.25rem;background:var(--bg);border-radius:4px;border:0.5px solid var(--border)"><div style="font-family:var(--serif);font-size:1.4rem;color:var(--gold)">5</div><div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text3);margin-top:0.2rem">Employers</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="r"><div class="sec-label">Let's Connect</div><h2 class="sec-title">Open to Opportunities</h2><div class="sec-rule"></div></div>
+    <div class="contact-wrap">
+      <div class="contact-form r2">
+        <div style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text3);margin-bottom:1.5rem">Send a Message</div>
+        <div id="form-wrap">
+          <form id="contact-form" action="https://formspree.io/f/mojzdogp" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Your Name</label>
+                <input id="f-name" type="text" name="name" placeholder="e.g. Jane Smith" required>
+              </div>
+              <div class="form-group">
+                <label for="f-org">Organisation</label>
+                <input id="f-org" type="text" name="organisation" placeholder="e.g. Acme Corp">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email Address</label>
+              <input id="f-email" type="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="f-role">Role / Opportunity</label>
+              <input id="f-role" type="text" name="role" placeholder="e.g. VP of Digital Transformation">
+            </div>
+            <div class="form-group">
+              <label for="f-msg">Message</label>
+              <textarea id="f-msg" name="message" rows="4" placeholder="Tell me about the opportunity..." required></textarea>
+            </div>
+            <div id="form-error" style="margin-bottom:0.75rem;font-size:0.78rem;color:#e24b4a;display:none"></div>
+            <button type="submit" class="form-submit" id="form-btn">Send Message →</button>
+          </form>
+        </div>
+        <div id="form-success" style="display:none;padding:2rem;text-align:center">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem">✓</div>
+          <div style="font-size:0.95rem;font-weight:500;color:#3ecf8e;margin-bottom:0.5rem">Message sent successfully!</div>
+          <div style="font-size:0.8rem;color:var(--text2)">Prabu will be in touch within 24 hours.</div>
+        </div>
+      </div>
+      <div class="contact-info r3">
+        <p style="font-size:0.85rem;font-weight:300;color:var(--text2);line-height:1.85;margin-bottom:2rem">Available for senior programme leadership, Agentic AI transformation advisory, and strategic consulting engagements. Trusted by Fortune-class clients across three global regions.</p>
+        <div class="ci-item"><div class="ci-icon">✉</div><div><div class="ci-label">Email</div><div class="ci-val">prabuvshankar@gmail.com</div></div></div>
+        <div class="ci-item"><div class="ci-icon">☎</div><div><div class="ci-label">Phone</div><div class="ci-val">+91 98409 01645</div></div></div>
+        <div class="ci-item"><div class="ci-icon">📍</div><div><div class="ci-label">Base Location</div><div class="ci-val">Chennai, India</div></div></div>
+        <div class="geo-strip">
+          <span class="geo-tag">🌎 Americas</span>
+          <span class="geo-tag">🌏 APMEA</span>
+          <span class="geo-tag">🌍 Europe</span>
+
+        </div>
+        <div style="margin-top:2rem;background:var(--surface2);border:0.5px solid var(--border);border-left:2px solid var(--gold);padding:1.25rem 1.5rem;border-radius:0 4px 4px 0">
+          <div style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text3);margin-bottom:0.5rem">Ideal Next Role</div>
+          <div style="font-size:0.85rem;color:var(--text2);line-height:1.7">VP / Director of Programme Delivery · Head of Digital Transformation · Chief Transformation Officer · Senior Agentic AI Programme Lead</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-copy">© 2025 Prabu Shankar V · All rights reserved · Chennai, India</div>
+  <div class="ft-brand" style="font-family:var(--sans);font-size:0.75rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);opacity:0.6">Prabu Shankar V</div>
+</footer>
+
+<script>
+/* ── INTERSECTION OBSERVER ── */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.r,.r2,.r3').forEach(el => io.observe(el));
+
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({ behavior:'smooth', block:'start' });
+  });
+});
+
+/* ── DASHBOARD TABS ── */
+function showDash(panel) {
+  document.querySelectorAll('.dash-panel').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.dash-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + panel).style.display = 'block';
+  event.target.classList.add('active');
+}
+
+/* ── FORMSPREE CONTACT FORM ── */
+const form = document.getElementById('contact-form');
+const btn = document.getElementById('form-btn');
+const errBox = document.getElementById('form-error');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  errBox.style.display = 'none';
+
+  const nameVal = document.getElementById('f-name').value.trim();
+  const emailVal = document.getElementById('f-email').value.trim();
+  const msgVal = document.getElementById('f-msg').value.trim();
+
+  if (!nameVal) { showError('Please enter your name.'); return; }
+  if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) { showError('Please enter a valid email address.'); return; }
+  if (!msgVal) { showError('Please enter a message.'); return; }
+
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+
+    if (res.ok) {
+      document.getElementById('form-wrap').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    } else {
+      const data = await res.json();
+      const errMsg = data.errors ? data.errors.map(e => e.message).join(', ') : 'Submission failed. Please email prabuvshankar@gmail.com directly.';
+      showError(errMsg);
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    showError('Network error. Please email prabuvshankar@gmail.com directly.');
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+  }
+});
+
+function showError(msg) {
+  errBox.textContent = msg;
+  errBox.style.display = 'block';
+}
+
+/* ── CHART COLORS ── */
+const G = '#b8964a', T = '#2a9d8f', B = '#3a7bd5', G2 = 'rgba(184,150,74,0.15)', T2 = 'rgba(42,157,143,0.15)';
+const gridColor = 'rgba(255,255,255,0.05)';
+const tickColor = 'rgba(255,255,255,0.3)';
+const baseOpts = {
+  responsive:true, maintainAspectRatio:false,
+  plugins:{ legend:{ display:false } },
+  scales:{
+    x:{ grid:{ color:gridColor }, ticks:{ color:tickColor, font:{ size:11 } } },
+    y:{ grid:{ color:gridColor }, ticks:{ color:tickColor, font:{ size:11 } } }
+  }
+};
+
+/* ── DELIVERY CHARTS ── */
+new Chart(document.getElementById('csatChart'), {
+  type:'line',
+  data:{
+    labels:['2008','2010','2012','2014','2016','2018','2020','2022','2024','2025'],
+    datasets:[{
+      label:'CSAT %',
+      data:[88,90,91,93,93,96,97,98,98,98],
+      borderColor:G, backgroundColor:G2, borderWidth:2,
+      pointBackgroundColor:G, pointRadius:3, fill:true, tension:0.4
+    }]
+  },
+  options:{...baseOpts, scales:{...baseOpts.scales, y:{...baseOpts.scales.y, min:80, max:100}}}
+});
+
+
+
+/* ── RADIAL PROGRESS ANIMATION ── */
+(function(){
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.querySelectorAll('.rm-fill').forEach(circle => {
+          const pct = parseFloat(circle.getAttribute('data-pct'));
+          const circumference = 2 * Math.PI * 32;
+          const offset = circumference - (pct / 100) * circumference;
+          circle.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1)';
+          circle.style.strokeDashoffset = offset;
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.3});
+  const rm = document.getElementById('radial-milestones');
+  if(rm) observer.observe(rm);
+  const wp = document.getElementById('wipro-progression');
+  if(wp){
+    const wpObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add('wp-visible'); wpObs.unobserve(e.target); }
+      });
+    }, {threshold: 0.2});
+    wpObs.observe(wp);
+  }
+})();
+
+/* ── REVENUE CHARTS ── */
+new Chart(document.getElementById('revenueChart'), {
+  type:'bar',
+  data:{
+    labels:['FY19','FY20','FY21','FY22','FY23','FY24','FY25'],
+    datasets:[{
+      label:'Revenue Index',
+      data:[100,112,128,145,168,188,210],
+      backgroundColor: ['rgba(184,150,74,0.3)','rgba(184,150,74,0.35)','rgba(184,150,74,0.45)','rgba(184,150,74,0.55)','rgba(184,150,74,0.7)','rgba(184,150,74,0.85)',G],
+      borderRadius:2
+    }]
+  },
+  options:{...baseOpts, scales:{...baseOpts.scales, y:{...baseOpts.scales.y, min:80}}}
+});
+
+new Chart(document.getElementById('engagementChart'), {
+  type:'bar',
+  data:{
+    labels:['2019','2020','2021','2022','2023','2024'],
+    datasets:[
+      { label:'Multi-tower Strategic', data:[30,38,45,55,65,70], backgroundColor:G, borderRadius:2 },
+      { label:'Single-tower', data:[70,62,55,45,35,30], backgroundColor:'rgba(255,255,255,0.08)', borderRadius:2,
+        borderColor:'rgba(42,157,143,0.6)', borderWidth:1, borderDash:[4,2] }
+    ]
+  },
+  options:{
+    ...baseOpts,
+    scales:{
+      x:{ stacked:true, grid:{ color:gridColor }, ticks:{ color:tickColor, font:{ size:11 } } },
+      y:{ stacked:true, grid:{ color:gridColor }, ticks:{ color:tickColor, font:{ size:11 }, callback: v=>v+'%' }, max:100 }
+    }
+  }
+});
+
+new Chart(document.getElementById('portfolioChart'), {
+  type:'line',
+  data:{
+    labels:['2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets:[
+      { label:'Account Retention %', data:[93,93,94,94,94,94,94,94], borderColor:G, backgroundColor:G2, borderWidth:2, pointBackgroundColor:G, pointRadius:3, fill:true, tension:0.3 },
+      { label:'Client CSAT %', data:[95,96,97,97,98,98,98,98], borderColor:T, backgroundColor:T2, borderWidth:2, pointBackgroundColor:T, pointRadius:3, fill:true, tension:0.3, borderDash:[4,2] }
+    ]
+  },
+  options:{...baseOpts, scales:{...baseOpts.scales, y:{...baseOpts.scales.y, min:88, max:100}}}
+});
+
+/* ── AI CHARTS ── */
+new Chart(document.getElementById('aiResolutionChart'), {
+  type:'bar',
+  data:{
+    labels:['Before AI','After AI'],
+    datasets:[{
+      label:'Hours',
+      data:[48,3.5],
+      backgroundColor:['rgba(224,75,75,0.6)',G],
+      borderRadius:2
+    }]
+  },
+  options:{...baseOpts, scales:{...baseOpts.scales, y:{...baseOpts.scales.y, ticks:{...baseOpts.scales.y.ticks, callback: v=>v+'h'}}}}
+});
+
+new Chart(document.getElementById('adoptionChart'), {
+  type:'line',
+  data:{
+    labels:['Month 1','Month 2','Month 3','Month 4','Month 5','Month 6'],
+    datasets:[{
+      label:'Certification %',
+      data:[10,22,45,62,75,85],
+      borderColor:G, backgroundColor:G2, borderWidth:2,
+      pointBackgroundColor:G, pointRadius:4, fill:true, tension:0.4
+    }]
+  },
+  options:{...baseOpts, scales:{...baseOpts.scales, y:{...baseOpts.scales.y, min:0, max:100, ticks:{...baseOpts.scales.y.ticks, callback: v=>v+'%'}}}}
+});
+
+new Chart(document.getElementById('hitlChart'), {
+  type:'bar',
+  data:{
+    labels:['AP Helpdesk','Smart Procure','Doc Processing','ServiceNow CSM'],
+    datasets:[{
+      label:'HITL Reduction %',
+      data:[70,30,95,55],
+      backgroundColor:[G,T,B,'rgba(184,150,74,0.5)'],
+      borderRadius:2
+    }]
+  },
+  options:{
+    ...baseOpts,
+    scales:{
+      x:{ grid:{ color:'transparent' }, ticks:{ color:tickColor, font:{ size:11 } } },
+      y:{ grid:{ color:gridColor }, ticks:{ color:tickColor, font:{ size:11 }, callback: v=>v+'%' }, max:100 }
+    }
+  }
+});
+</script>
+</body>
+</html>
